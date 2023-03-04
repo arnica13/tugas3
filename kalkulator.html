@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kalkulator Sederhana</title>
+	<style>
+		body {
+			background-color: purple;
+			font-family: "Times New Roman", Times, serif;
+		}
+
+		h1 {
+			text-align: center;
+			color: white;
+			text-shadow: 2px 2px 4px #000000;
+		}
+
+		.container {
+			margin: 0 auto;
+			width: 50%;
+			padding: 20px;
+			background-color: #ffffff;
+			border-radius: 10px;
+			box-shadow: 2px 2px 4px #000000;
+		}
+
+		input[type="number"] {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 10px;
+			border: none;
+			border-radius: 5px;
+			background-color: #f2f2f2;
+			font-size: 16px;
+			text-align: right;
+		}
+
+		.btn {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+			margin: 5px;
+			box-shadow: 2px 2px 4px #000000;
+		}
+
+		.btn:hover {
+			background-color: #3e8e41;
+		}
+
+		.btn:focus {
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+	<h1>Kalkulator Sederhana</h1>
+	<div class="container">
+		<input type="number" id="bil1" placeholder="Masukkan bilangan pertama" required>
+		<input type="number" id="bil2" placeholder="Masukkan bilangan kedua" required>
+		<div>
+			<button class="btn" onclick="tambah()">+</button>
+			<button class="btn" onclick="kurang()">-</button>
+			<button class="btn" onclick="kali()">x</button>
+			<button class="btn" onclick="bagi()">/</button>
+		</div>
+		<input type="number" id="hasil" placeholder="Hasil operasi akan muncul di sini" readonly>
+	</div>
+
+	<script>
+		function tambah() {
+			var bil1 = parseInt(document.getElementById("bil1").value);
+			var bil2 = parseInt(document.getElementById("bil2").value);
+			var hasil = bil1 + bil2;
+			document.getElementById("hasil").value = hasil;
+		}
+
+		function kurang() {
+			var bil1 = parseInt(document.getElementById("bil1").value);
+			var bil2 = parseInt(document.getElementById("bil2").value);
+			var hasil = bil1 - bil2;
+			document.getElementById("hasil").value = hasil;
+		}
+
+		function kali() {
+			var bil1 = parseInt(document.getElementById("bil1").value);
+			var bil2 = parseInt(document.getElementById("bil2").value);
+			var hasil = bil1 * bil2;
+			document.getElementById("hasil").value = hasil;
+		}
+
+		function bagi() {
+			var bil1 = parseInt(document.getElementById("bil1").value);
+			var bil2 = parseInt(document.getElementById("bil2").value);
+			var hasil = bil1 / bil2;
+			document.getElementById("hasil").value = hasil;
+		}
+	</script>
+</body>
+</html

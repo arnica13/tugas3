@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Konversi Nilai Angka ke Huruf</title>
+	<style>
+		body {
+			background-color: purple;
+			color: white;
+			font-family:"Times New Roman", Times, serif; 
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		form {
+			margin: 0 auto;
+			width: 50%;
+			padding: 20px;
+			background-color: white;
+			border-radius: 10px;
+		}
+
+		input[type="number"] {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 10px;
+			border: none;
+			border-radius: 5px;
+			background-color: #f2f2f2;
+			font-size: 16px;
+		}
+
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+			float: right;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Konversi Nilai Angka ke Huruf</h1>
+	<form>
+		<label for="nilai">Masukkan Nilai Anda:</label>
+		<input type="number" id="nilai" name="nilai" required>
+		<input type="submit" value="Konversi">
+	</form>
+
+	<script>
+		function konversiNilai() {
+			var nilai = document.getElementById("nilai").value;
+
+			if (nilai >= 0 && nilai <= 40) {
+				alert("Nilai Anda: E");
+			} else if (nilai >= 41 && nilai <= 55) {
+				alert("Nilai Anda: D");
+			} else if (nilai >= 56 && nilai <= 60) {
+				alert("Nilai Anda: C");
+			} else if (nilai >= 61 && nilai <= 65) {
+				alert("Nilai Anda: BC");
+			} else if (nilai >= 66 && nilai <= 70) {
+				alert("Nilai Anda: B");
+			} else if (nilai >= 71 && nilai <= 80) {
+				alert("Nilai Anda: AB");
+			} else if (nilai >= 81 && nilai <= 100) {
+				alert("Nilai Anda: A");
+			} else {
+				alert("Nilai yang Anda masukkan tidak valid!");
+			}
+		}
+
+		document.querySelector("form").addEventListener("submit", function(event) {
+			event.preventDefault();
+			konversiNilai();
+		});
+	</script>
+</body>
+</html>
